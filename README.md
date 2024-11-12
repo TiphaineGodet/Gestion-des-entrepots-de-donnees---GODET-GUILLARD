@@ -44,3 +44,20 @@ Restockage des Données Transformées :
 
 Visualisation des Données :
     Pour valoriser les données, des visualisations interactives sont créées, permettant de générer des insights visuels et des rapports. Ces visualisations sont essentielles pour l’analyse de tendances et l’aide à la décision.
+
+
+## 🎭 Cibles
+- **Utilisateurs de Vélos en Libre-Service (Cyclistes)** Les cyclistes pourraient utiliser les données croisées pour choisir les meilleures périodes pour louer un vélo, en fonction de la météo et de la disponibilité des stations Belib.
+  
+- **Gestionnaires des Systèmes de Vélo** (Opérateurs Belib)** Les opérateurs peuvent utiliser les données pour mieux gérer l'implantation et la disponibilité des vélos dans certaines stations. Par exemple, des stations peuvent être réapprovisionnées en vélos pendant les jours où la météo est favorable à l'utilisation de vélos.
+   
+- **Autorités Locales et Urbanistes** Les autorités de la ville de Paris ou des urbanistes pourraient utiliser ces données pour optimiser la planification des infrastructures de transport urbain, améliorer l’accessibilité et encourager l’utilisation des vélos.
+   
+- **Assureurs et Sociétés de Transport** Les assureurs et les entreprises de transport pourraient utiliser ces informations pour mieux comprendre l'impact de la météo sur la sécurité des cyclistes et sur la demande de transport en vélo.
+   
+- **Chercheurs et Analystes en Mobilité Urbaine** Les chercheurs peuvent analyser les comportements de mobilité des citadins en fonction de facteurs externes comme la météo. Cela pourrait contribuer à des études sur les modes de transport durables et la manière dont les conditions météorologiques influencent le choix des moyens de transport.
+   
+- **Développeurs d'Applications et Startups** Des entreprises tech ou des startups dans le domaine de la mobilité urbaine pourraient utiliser ces données pour créer des applications ou des services qui optimisent l’utilisation des vélos partagés en fonction de la météo.
+   
+- **Touristes et Visiteurs à Paris** Les touristes peuvent profiter d'une application qui leur fournit des conseils sur les conditions de voyage en vélo à Paris, en prenant en compte la météo.
+  
