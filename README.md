@@ -49,7 +49,7 @@ Visualisation des Données :
 ## 🎭 Cibles
 - **Utilisateurs de Vélos en Libre-Service (Cyclistes)** Les cyclistes pourraient utiliser les données croisées pour choisir les meilleures périodes pour louer un vélo, en fonction de la météo et de la disponibilité des stations Belib.
   
-- **Gestionnaires des Systèmes de Vélo** (Opérateurs Belib)** Les opérateurs peuvent utiliser les données pour mieux gérer l'implantation et la disponibilité des vélos dans certaines stations. Par exemple, des stations peuvent être réapprovisionnées en vélos pendant les jours où la météo est favorable à l'utilisation de vélos.
+- **Gestionnaires des Systèmes de Vélo (Opérateurs Belib)** Les opérateurs peuvent utiliser les données pour mieux gérer l'implantation et la disponibilité des vélos dans certaines stations. Par exemple, des stations peuvent être réapprovisionnées en vélos pendant les jours où la météo est favorable à l'utilisation de vélos.
    
 - **Autorités Locales et Urbanistes** Les autorités de la ville de Paris ou des urbanistes pourraient utiliser ces données pour optimiser la planification des infrastructures de transport urbain, améliorer l’accessibilité et encourager l’utilisation des vélos.
    
