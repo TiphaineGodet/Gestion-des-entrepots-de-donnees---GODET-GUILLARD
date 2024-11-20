@@ -10,13 +10,7 @@
 ### Cloud & Bases de Données
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-5.0-green?logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14-blue?logo=postgresql&logoColor=white)
 
-
-### Bibliothèques de Données & Machine Learning
-
-![Pandas](https://img.shields.io/badge/Pandas-1.5.2-brightgreen?logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-1.21.0-blue?logo=numpy&logoColor=white)
 
 ### Outils de Visualisation
 
@@ -66,55 +60,23 @@ Visualisation des Données :
 
 ```
 .
-├── data
-│   └── kafka_messages.csv
-├── data-ingestion-kedro
-│   ├── conf
-│   ├── data
-│   ├── notebooks
-│   ├── pyproject.toml
-│   ├── README.md
-│   ├── requirements.txt
-│   ├── session_store.db
-│   ├── src
-│   └── tests
-├── docs
-│   └── realtime_restaurant_insights_project_description.pdf.pdf
-├── ELK
-│   ├── docker-compose.yml
-│   └── import_to_elasticsearch.py
-├── ENV
-│   ├── bin
-│   ├── etc
-│   ├── include
-│   ├── lib
-│   ├── lib64 -> lib
-│   ├── pyvenv.cfg
-│   └── share
-├── image-1.png
-├── image-2.png
-├── image-3.png
-├── image-4.png
-├── image.png
-├── kafka
-├── kedro-airflow
-│   ├── dags
-│   ├── docker-compose.yml
-│   ├── requirements.txt
+├── Airflow
+│   └── dags
 │   └── script
-├── notebook
-│   └── EDA.ipynb
-├── README.md
-├── script
-│   ├── getApi_Alim.py
-│   └── preprocessing.py
-├── sentiment_analysis_kafka
+│   └── └── entrypoint.sh
+│   └── confi_airflow.md
+│   └── docker-compose.yml
+│   └── requirements.txt
+├── data_collection
+│   ├── export_mongodb.csv
+│   ├── getAPI.py
+├── ELK
+│   ├── config.md
 │   ├── docker-compose.yml
-│   ├── requirements.txt
-│   └── sentiment_analysis.py
-└── spark
-    ├── kafka_to_spark.py
-    └── script
+├── .env
+├── .gitignore
+├── README.md
+
 ```
 
 ## Workflow et Schéma d'Architecture
@@ -126,12 +88,9 @@ Visualisation des Données :
    - Extraction des prévisions météo sur 7 jours, (données renseignées toutes les 3 heures)  (température, pluviométrie etc) envoie des données dans une collection meteo sur MongoDB.
 
 3. **Traitement des Données** :
-   
+   - Agrégation par la date et stockage sur un fichier CSV
 
-4. **Indexation et Stockage** :
-   - Les données nettoyées sont stockées dans PosgreSQL, indexées par la date.
-
-5. **Visualisation et Analyse** :
+4. **Visualisation et Analyse** :
    - Kibana est utilisé pour créer des tableaux de bord interactifs, permettant de suivre la conformité sanitaire et l’expérience client en temps réel.
 
 
