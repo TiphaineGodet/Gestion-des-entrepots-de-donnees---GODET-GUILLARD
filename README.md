@@ -62,19 +62,27 @@ Visualisation des Données :
 .
 ├── Airflow
 │   └── dags
+│   └── └── _pycache_
+│   └── └── └── dag_API_belib.cpython-310.pyc
+│   └── └── └── dag_API_meteo.cpython-310.pyc
+│   └── └── └── dag_API_cpython-310.pyc
+│   └── └── dag_API_belib.py
+│   └── └── dag_API_meteo.py
 │   └── script
 │   └── └── entrypoint.sh
 │   └── confi_airflow.md
 │   └── docker-compose.yml
 │   └── requirements.txt
 ├── data_collection
-│   ├── export_mongodb.csv
+│   ├── getAPI_2.py
 │   ├── getAPI.py
 ├── ELK
-│   ├── config.md
 │   ├── docker-compose.yml
+│   ├── export_mongodb_collections_fixed.csv
+│   ├── export-donnees
 ├── .env
 ├── .gitignore
+├── config.yml
 ├── README.md
 
 ```
@@ -85,33 +93,16 @@ Visualisation des Données :
    - Extraction des informations sur les locations de belib à Paris, envoi des données dans une collection belib sur MongoDB .
 
 2. **Ingestion des informations météo (infoclimat.fr)** :
-   - Extraction des prévisions météo sur 7 jours, (données renseignées toutes les 3 heures)  (température, pluviométrie etc) envoie des données dans une collection meteo sur MongoDB.
+   - Extraction des données de météo sur Paris en temps réel avec l'api openweathermap.org  (température, pluviométrie etc) envoie des données dans une collection weather sur MongoDB.
 
 3. **Traitement des Données** :
-   - Agrégation par la date et stockage sur un fichier CSV
+   - Agrégation par la date et stockage grace au code export-donnees dans un fichier csv export_multiple_collection_fixed.csv
 
 4. **Visualisation et Analyse** :
-   - Kibana est utilisé pour créer des tableaux de bord interactifs, permettant de suivre la conformité sanitaire et l’expérience client en temps réel.
+   - Kibana est utilisé pour créer des tableaux de bord interactifs, permettant de faire des analyses croisées des données des bornes de recharge Belib et de la météo.
 
 
-## Déroulement Technique du Projet
 
-### **Étapes d'installation :**
-
-1. **Cloner le dépôt :**
-   ```bash
-
-   ```
-
-2. **Créer un environnement virtuel :**
-   ```bash
-  
-   ```
-
-3. **Installer les dépendances :**
-   ```bash
-   pip install -r requirements.txt
-   ```
 
 **Configurer les variables d'environnement :**
    Créez un fichier `.env` et renseignez les informations de connexion MongoDB , OPENAI , le topic kafka , le lien de l'api et Elasticsearch :
@@ -120,7 +111,7 @@ MONGO_USERNAME="******"
 MONGO_PASSWORD="******"
 MONGO_DBNAME="*******"
 MONGO_URI="*********"
-API_URL=https://dgal.opendatasoft.com/api/explore/v2.1/catalog/datasets/export_alimconfiance/records
+API_URL="*********"
 
    ```
   
