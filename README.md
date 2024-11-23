@@ -106,11 +106,7 @@ Visualisation des Données :
 
 ### 🔄 **Diagramme d'Architecture**  
  
-graph TD
-    A[API Belib (OpenData Paris)] -->|Extraction| B[MongoDB (Collection : belib)]
-    C[API Météo (InfoClimat)] -->|Extraction| B
-    B -->|Transformation & Nettoyage| D[PostgreSQL (Entrepôt de données)]
-    D -->|Visualisation| E[Kibana (Tableaux de bord)]
+![image](https://github.com/user-attachments/assets/db2ecfbe-d0a8-4348-9e6c-e1da139e5955)
 
 
 
