@@ -44,19 +44,19 @@ Visualisation des Données :
 
 
 ## 🎯 Cibles
-- **Utilisateurs de Vélos en Libre-Service (Cyclistes)** Les cyclistes pourraient utiliser les données croisées pour choisir les meilleures périodes pour louer un vélo, en fonction de la météo et de la disponibilité des stations Belib.
+- **Utilisateurs de Belib en Libre-Service ** Les utilisateurs pourraient utiliser les données croisées pour choisir les meilleures périodes pour utiliser les bornes, en fonction de la météo et de la disponibilité des stations Belib.
   
-- **Gestionnaires des Systèmes de Vélo (Opérateurs Belib)** Les opérateurs peuvent utiliser les données pour mieux gérer l'implantation et la disponibilité des vélos dans certaines stations. Par exemple, des stations peuvent être réapprovisionnées en vélos pendant les jours où la météo est favorable à l'utilisation de vélos.
+- **Gestionnaires des Systèmes de bornes (Opérateurs Belib)** Les opérateurs peuvent utiliser les données pour mieux gérer l'implantation et la disponibilité des bornes dans certaines stations. 
    
-- **Autorités Locales et Urbanistes** Les autorités de la ville de Paris ou des urbanistes pourraient utiliser ces données pour optimiser la planification des infrastructures de transport urbain, améliorer l’accessibilité et encourager l’utilisation des vélos.
+- **Autorités Locales et Urbanistes** Les autorités de la ville de Paris ou des urbanistes pourraient utiliser ces données pour optimiser la planification des infrastructures de transport urbain, améliorer l’accessibilité et encourager l’utilisation des belib.
    
-- **Assureurs et Sociétés de Transport** Les assureurs et les entreprises de transport pourraient utiliser ces informations pour mieux comprendre l'impact de la météo sur la sécurité des cyclistes et sur la demande de transport en vélo.
+- **Assureurs et Sociétés de Transport** Les assureurs et les entreprises de transport pourraient utiliser ces informations pour mieux comprendre l'impact de la météo sur la sécurité et sur la demande de transport.
    
 - **Chercheurs et Analystes en Mobilité Urbaine** Les chercheurs peuvent analyser les comportements de mobilité des citadins en fonction de facteurs externes comme la météo. Cela pourrait contribuer à des études sur les modes de transport durables et la manière dont les conditions météorologiques influencent le choix des moyens de transport.
    
 - **Développeurs d'Applications et Startups** Des entreprises tech ou des startups dans le domaine de la mobilité urbaine pourraient utiliser ces données pour créer des applications ou des services qui optimisent l’utilisation des vélos partagés en fonction de la météo.
    
-- **Touristes et Visiteurs à Paris** Les touristes peuvent profiter d'une application qui leur fournit des conseils sur les conditions de voyage en vélo à Paris, en prenant en compte la météo.
+- **Touristes et Visiteurs à Paris** Les touristes peuvent profiter d'une application qui leur fournit des conseils sur les conditions de voyage à Paris, en prenant en compte la météo.
 
 
 ## Architecture du Projet 
@@ -118,3 +118,42 @@ API_URL="*********"
 
    ```
   
+## 🛑 **Difficultés Rencontrées**  
+
+1. **Choix de l'API**  
+   - Identifier une API fiable fournissant des données complètes et pertinentes a été une étape complexe.  
+   - Certaines APIs testées ne proposaient pas de données en temps réel ou nécessitaient une authentification complexe.  
+
+
+2. **Insertion dans MongoDB**  
+   - La structure des données issues de l'API a nécessité des transformations avant l'insertion dans MongoDB.  
+   - Des problèmes de compatibilité et des erreurs de validation ont ralenti l'insertion dans MongoDB.  
+
+3. **Automatisation avec Apache Airflow**  
+   - Intégrer des workflows automatisés et s’assurer de leur fiabilité a demandé une montée en compétence sur cet outil.  
+   - Des erreurs dans la configuration des DAGs ont parfois causé des échecs imprévus.  
+
+4. **Analyse sur Kibana**  
+   - L’apprentissage de Kibana a été compliqué, car l’équipe n’avait pas d’expérience avec cet outil.    
+
+---
+
+## 🌟 **Compétences Développées**  
+
+1. **Maîtrise des APIs**  
+   - Compréhension  des mécanismes des API : authentification, formats JSON, gestion des erreurs.  
+
+2. **Bases de données NoSQL**  
+   - Manipulation de MongoDB : création de collections, gestion des schémas flexibles, et insertion des données.  
+
+3. **Orchestration de flux de travail**  
+   - Utilisation d’Apache Airflow pour automatiser la collecte, la transformation, et le stockage des données.  
+
+4. **Visualisation des données**  
+   - Création de tableaux de bord avec Kibana pour analyser et interpréter les données des stations Belib'.  
+
+5. **Résolution de problèmes complexes**  
+   - Identifier et corriger des bugs liés aux intégrations, aux workflows, et aux transformations de données.  
+
+6. **Travail collaboratif et méthodologie**  
+   - Application de bonnes pratiques en gestion de projet (versionning).  
