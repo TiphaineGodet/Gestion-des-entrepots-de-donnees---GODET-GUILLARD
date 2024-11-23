@@ -104,6 +104,15 @@ Visualisation des Données :
 4. **Visualisation et Analyse** :
    - Kibana est utilisé pour créer des tableaux de bord interactifs, permettant de faire des analyses croisées des données des bornes de recharge Belib et de la météo.
 
+### 🔄 **Diagramme d'Architecture**  
+
+```mermaid
+graph TD
+    A[API Belib (OpenData Paris)] -->|Extraction| B[MongoDB (Collection : belib)]
+    C[API Météo (InfoClimat)] -->|Extraction| B
+    B -->|Transformation & Nettoyage| D[PostgreSQL (Entrepôt de données)]
+    D -->|Visualisation| E[Kibana (Tableaux de bord)]
+
 
 
 
