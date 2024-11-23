@@ -11,6 +11,9 @@
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-5.0-green?logo=mongodb&logoColor=white)
 
+### Automatisation
+
+![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-2.6.3-darkblue?logo=apache-airflow&logoColor=white)
 
 ### Outils de Visualisation
 
