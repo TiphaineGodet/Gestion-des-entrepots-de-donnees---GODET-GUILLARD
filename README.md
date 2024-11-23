@@ -134,7 +134,10 @@ API_URL="*********"
    - Des erreurs dans la configuration des DAGs ont parfois causé des échecs imprévus.  
 
 4. **Analyse sur Kibana**  
-   - L’apprentissage de Kibana a été compliqué, car l’équipe n’avait pas d’expérience avec cet outil.    
+   - L’apprentissage de Kibana a été compliqué, car l’équipe n’avait pas d’expérience avec cet outil.
+  
+5. **Problème de configuration**  
+   - On s'était organisé pour créer deux branches afin de pousser nos codes chacun de notre côté. Mais à cause des problèmes de configuration (notamment pour le lancement d'Airflow) et d'un manque de connaissance, l'ensemble des codes ont été lancés depuis un PC, ce qui a ralenti l'avancé du projet.    
 
 ---
 
