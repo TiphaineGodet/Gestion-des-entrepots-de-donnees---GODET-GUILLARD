@@ -125,7 +125,7 @@ API_URL="*********"
 
 1. **Choix de l'API**  
    - Identifier une API fiable fournissant des données complètes et pertinentes a été une étape complexe.  
-   - Certaines APIs testées ne proposaient pas de données en temps réel ou nécessitaient une authentification complexe.  
+   - Certaines APIs testées ne proposaient pas de données en temps réel (les données choisies pour l'API belib sont des données statiques) ou nécessitaient une authentification complexe.  
 
 
 2. **Insertion dans MongoDB**  
