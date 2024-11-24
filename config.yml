@@ -1,0 +1,5 @@
+database_name : "db_GestionDesEntrepots"
+#host :  "db."
+#port : "5432"
+#pwd : ""
+#user : ""
