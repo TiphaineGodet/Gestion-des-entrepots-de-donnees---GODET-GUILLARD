@@ -1,0 +1,67 @@
+from pymongo import MongoClient
+import csv
+import os
+from dotenv import load_dotenv
+
+# Charger les variables d'environnement
+load_dotenv()
+
+def export_multiple_collections_to_csv(collections, output_file):
+    """
+    Exporte plusieurs collections MongoDB dans un fichier CSV unique.
+    :param collections: Liste des noms des collections à exporter.
+    :param output_file: Nom du fichier CSV de sortie.
+    """
+    try:
+        # Charger les informations de connexion MongoDB depuis .env
+        mongodb_url = os.getenv('MONGO_URL')
+        dbname = os.getenv('MONGO_DBNAME')
+
+        if not mongodb_url or not dbname:
+            raise ValueError("Les informations de connexion MongoDB sont manquantes dans les variables d'environnement.")
+
+        # Connexion à MongoDB
+        client = MongoClient(mongodb_url)
+        db = client[dbname]
+
+        # Collecter toutes les clés uniques de toutes les collections
+        all_keys = set()
+        collection_data = {}
+
+        for collection_name in collections:
+            collection = db[collection_name]
+            data = list(collection.find())
+            collection_data[collection_name] = data
+
+            for doc in data:
+                all_keys.update(doc.keys())
+
+        # Retirer `_id` des clés et ajouter `collection_name`
+        all_keys.discard("_id")
+        all_keys = list(all_keys)
+        all_keys.append("collection_name")
+
+        # Ouvrir le fichier CSV pour écrire
+        with open(output_file, mode='w', newline='', encoding='utf-8') as csv_file:
+            writer = csv.writer(csv_file)
+
+            # Écrire l'en-tête avec toutes les colonnes collectées
+            writer.writerow(all_keys)
+
+            # Écrire les données des collections
+            for collection_name, data in collection_data.items():
+                for doc in data:
+                    row = [doc.get(key, '') for key in all_keys if key != "collection_name"]
+                    row.append(collection_name)  # Ajouter le nom de la collection comme colonne
+                    writer.writerow(row)
+
+        print(f"Exportation terminée avec succès. Fichier CSV généré : {output_file}")
+
+    except Exception as e:
+        print(f"Une erreur est survenue : {e}")
+
+# Exemple d'utilisation
+if __name__ == "__main__":
+    collections_to_export = ["belib", "weather"]  # Noms des collections à exporter
+    output_csv_file = "export_multiple_collections_fixed.csv"  # Nom du fichier CSV de sortie
+    export_multiple_collections_to_csv(collections_to_export, output_csv_file)
